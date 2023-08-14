@@ -7,9 +7,12 @@ namespace Recursion
 {
     public class Task2
     {
-        public static int Add(int a, int b)
+        public static int SumOfNumber(int sum, int number)
         {
-            return a + b;
+            // какой выход из рекурсии?
+            // что будет изменять при каждой рекурсии
+            if (number <= 0) return sum;
+            return SumOfNumber(sum + number % 10, number / 10);
         }
     }
 }

@@ -1,0 +1,15 @@
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.csproj.AssemblyReference.cache
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.AssemblyInfoInputs.cache
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.AssemblyInfo.cs
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.csproj.CoreCompileInputs.cache
+/Users/diko/Documents/highSchool/recursion/1/bin/Debug/net7.0/1
+/Users/diko/Documents/highSchool/recursion/1/bin/Debug/net7.0/1.deps.json
+/Users/diko/Documents/highSchool/recursion/1/bin/Debug/net7.0/1.runtimeconfig.json
+/Users/diko/Documents/highSchool/recursion/1/bin/Debug/net7.0/1.dll
+/Users/diko/Documents/highSchool/recursion/1/bin/Debug/net7.0/1.pdb
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.dll
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/refint/1.dll
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.pdb
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/1.genruntimeconfig.cache
+/Users/diko/Documents/highSchool/recursion/1/obj/Debug/net7.0/ref/1.dll

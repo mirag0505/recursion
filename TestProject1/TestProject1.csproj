@@ -22,4 +22,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../1/1.csproj" />
+  </ItemGroup>
 </Project>

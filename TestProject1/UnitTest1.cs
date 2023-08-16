@@ -52,14 +52,14 @@ public class UnitTest1
     [Fact]
     public void Task4()
     {
-        Assert.Equal(true, Recursion.Task4.isPalindrom("12321"));
-        Assert.Equal(true, Recursion.Task4.isPalindrom("1221"));
-        Assert.Equal(true, Recursion.Task4.isPalindrom("aba"));
+        Assert.Equal(true, Recursion.Task4.isPalindrom("12321", 0));
+        Assert.Equal(true, Recursion.Task4.isPalindrom("1221", 0));
+        Assert.Equal(true, Recursion.Task4.isPalindrom("aba", 0));
 
-        Assert.Equal(false, Recursion.Task4.isPalindrom("1234"));
-        Assert.Equal(false, Recursion.Task4.isPalindrom("4321"));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("1234", 0));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("4321", 0));
 
-        Assert.Equal(false, Recursion.Task4.isPalindrom("1231"));
-        Assert.Equal(false, Recursion.Task4.isPalindrom("13321"));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("1231", 0));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("13321", 0));
     }
 }

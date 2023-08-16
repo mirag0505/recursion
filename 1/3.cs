@@ -11,7 +11,7 @@ namespace Recursion
             if (!list.Any()) return length;
 
             list.RemoveAt(0);
-            return getLengthList<T>(list, ++length);
+            return getLengthList<T>(list, length + 1);
         }
     }
 }

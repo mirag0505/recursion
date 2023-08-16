@@ -1,7 +1,6 @@
 // 1. возведение числа N в степень M;
 
 using System;
-using System.Collections.Generic;
 
 namespace Recursion
 {

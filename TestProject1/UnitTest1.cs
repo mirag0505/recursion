@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TestProject1;
 
 public class UnitTest1
@@ -31,5 +33,19 @@ public class UnitTest1
 
         Assert.Equal(6, Recursion.Task2.SumOfNumber(0, 123));
         Assert.Equal(0, Recursion.Task2.SumOfNumber(0, 000));
+    }
+
+    [Fact]
+    public void Task3()
+    {
+        List<int> list = new List<int> { 1, 2, 3, 4, 5 };
+        Assert.Equal(5, Recursion.Task3.getLengthList(list, 0));
+
+        List<int> list1 = new List<int> { };
+        Assert.Equal(0, Recursion.Task3.getLengthList(list1, 0));
+
+        List<int> list2 = new List<int> { 123, 123, 1231, 0, 123 };
+        Assert.Equal(5, Recursion.Task3.getLengthList(list2, 0));
+
     }
 }

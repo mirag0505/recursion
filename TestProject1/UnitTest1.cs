@@ -46,6 +46,20 @@ public class UnitTest1
 
         List<int> list2 = new List<int> { 123, 123, 1231, 0, 123 };
         Assert.Equal(5, Recursion.Task3.getLengthList(list2, 0));
+    }
 
+
+    [Fact]
+    public void Task4()
+    {
+        Assert.Equal(true, Recursion.Task4.isPalindrom("12321"));
+        Assert.Equal(true, Recursion.Task4.isPalindrom("1221"));
+        Assert.Equal(true, Recursion.Task4.isPalindrom("aba"));
+
+        Assert.Equal(false, Recursion.Task4.isPalindrom("1234"));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("4321"));
+
+        Assert.Equal(false, Recursion.Task4.isPalindrom("1231"));
+        Assert.Equal(false, Recursion.Task4.isPalindrom("13321"));
     }
 }

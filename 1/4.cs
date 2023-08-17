@@ -7,14 +7,20 @@ namespace Recursion
 {
     public class Task4
     {
-        public static bool isPalindrom(string text, int indexOffset)
+        public static bool isPalindrom(string text)
         {
-            int midOfText = text.Length / 2;
-            int endIndex = text.Length - indexOffset - 1;
 
-            if (indexOffset <= midOfText && endIndex >= midOfText && text[indexOffset] != text[endIndex]) return false;
-            if (indexOffset == endIndex || indexOffset > midOfText || endIndex < midOfText) return true;
-            return isPalindrom(text, indexOffset + 1);
+            static bool recursionIterator(string text, int indexOffset)
+            {
+                int endIndex = text.Length - indexOffset - 1;
+                int startIndex = indexOffset;
+
+                if (startIndex >= endIndex) return true;
+                if (text[startIndex] != text[endIndex]) return false;
+                return recursionIterator(text, indexOffset + 1);
+            }
+
+            return recursionIterator(text, 0);
         }
     }
 }

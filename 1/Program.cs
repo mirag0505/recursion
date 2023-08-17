@@ -5,5 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
+        Recursion.Task4.isPalindrom("1221");
     }
 }

@@ -13,7 +13,7 @@ namespace Recursion
             if (array[index] % 2 == 0) Console.WriteLine(array[index]);
             recursionIterator(array, index + 1);
         }
-        public static void getEvenNumbers(List<int> array)
+        public static void showEvenNumbers(List<int> array)
         {
             recursionIterator(array, 0);
         }

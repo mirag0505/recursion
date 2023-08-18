@@ -70,7 +70,7 @@ public class UnitTest1
         Console.SetOut(stringWriter);
 
         List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-        Recursion.Task5.getEvenNumbers(numbers);
+        Recursion.Task5.showEvenNumbers(numbers);
 
         var output = stringWriter.ToString().Trim();
         Console.SetOut(new StreamWriter(Console.OpenStandardOutput()));
@@ -80,5 +80,25 @@ public class UnitTest1
         Assert.Equal(2, messages.Length);
         Assert.Equal("2", messages[0]);
         Assert.Equal("4", messages[1]);
+    }
+
+    [Fact]
+    public void Task6()
+    {
+        var stringWriter = new StringWriter();
+        Console.SetOut(stringWriter);
+
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7 };
+        Recursion.Task6.showValueByEvenIndex(numbers);
+
+        var output = stringWriter.ToString().Trim();
+        Console.SetOut(new StreamWriter(Console.OpenStandardOutput()));
+
+        var messages = output.Split(Environment.NewLine);
+
+        Assert.Equal(3, messages.Length);
+        Assert.Equal("2", messages[0]);
+        Assert.Equal("5", messages[1]);
+        Assert.Equal("7", messages[2]);
     }
 }

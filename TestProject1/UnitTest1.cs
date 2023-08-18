@@ -62,4 +62,23 @@ public class UnitTest1
         Assert.Equal(false, Recursion.Task4.isPalindrom("1231"));
         Assert.Equal(false, Recursion.Task4.isPalindrom("13321"));
     }
+
+    [Fact]
+    public void Task5()
+    {
+        var stringWriter = new StringWriter();
+        Console.SetOut(stringWriter);
+
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        Recursion.Task5.getEvenNumbers(numbers);
+
+        var output = stringWriter.ToString().Trim();
+        Console.SetOut(new StreamWriter(Console.OpenStandardOutput()));
+
+        var messages = output.Split(Environment.NewLine);
+
+        Assert.Equal(2, messages.Length);
+        Assert.Equal("2", messages[0]);
+        Assert.Equal("4", messages[1]);
+    }
 }

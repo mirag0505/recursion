@@ -7,13 +7,13 @@ namespace Recursion
 {
     public class Task6
     {
-        private static void recursionIterator(List<int> array, int index)
+        private static void recursionIterator<T>(List<T> array, int index)
         {
             if (index >= array.Count()) return;
             if (index % 2 == 0) Console.WriteLine(array[index]);
             recursionIterator(array, index + 1);
         }
-        public static void showValueByEvenIndex(List<int> array)
+        public static void showValueByEvenIndex<T>(List<T> array)
         {
             recursionIterator(array, 0);
         }

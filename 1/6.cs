@@ -10,7 +10,7 @@ namespace Recursion
         private static void recursionIterator(List<int> array, int index)
         {
             if (index >= array.Count()) return;
-            if (array[index] % 2 == 0) Console.WriteLine(array[index]);
+            if (index % 2 == 0) Console.WriteLine(array[index]);
             recursionIterator(array, index + 1);
         }
         public static void showValueByEvenIndex(List<int> array)

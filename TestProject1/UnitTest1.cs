@@ -96,9 +96,10 @@ public class UnitTest1
 
         var messages = output.Split(Environment.NewLine);
 
-        Assert.Equal(3, messages.Length);
-        Assert.Equal("2", messages[0]);
-        Assert.Equal("5", messages[1]);
-        Assert.Equal("7", messages[2]);
+        Assert.Equal(4, messages.Length);
+        Assert.Equal("1", messages[0]);
+        Assert.Equal("3", messages[1]);
+        Assert.Equal("5", messages[2]);
+        Assert.Equal("7", messages[3]);
     }
 }

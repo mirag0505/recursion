@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Recursion.Task4.isPalindrom("1221");
+        string directoryPathTest = @"/Users/diko/Documents/highSchool/recursion/TestPath";
+        var result = Recursion.Task8.GetAllFiles(directoryPathTest);
     }
 }

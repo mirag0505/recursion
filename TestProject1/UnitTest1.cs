@@ -102,4 +102,23 @@ public class UnitTest1
         Assert.Equal("5", messages[2]);
         Assert.Equal("7", messages[3]);
     }
+
+    [Fact]
+    public void Task7()
+    {
+        Assert.Equal(4, Recursion.Task7.getSecondMaxValue(new List<int> { 1, 2, 3, 4, 5 }));
+        Assert.Equal(2, Recursion.Task7.getSecondMaxValue(new List<int> { 2, 2, 2, 2, 2 }));
+        Assert.Equal(2, Recursion.Task7.getSecondMaxValue(new List<int> { 2, 1, 2, 2, 1 }));
+        Assert.Equal(2, Recursion.Task7.getSecondMaxValue(new List<int> { 1, 2, 1, 2, 1 }));
+        Assert.Equal(5, Recursion.Task7.getSecondMaxValue(new List<int> { 5, 4, 3, 2, 5 }));
+        Assert.Equal(3, Recursion.Task7.getSecondMaxValue(new List<int> { 1, 2, 3, 3, 3, 4 }));
+    }
+
+    [Fact]
+    public void Task8()
+    {
+        string directoryPathTest = @"/Users/diko/Documents/highSchool/recursion/1";
+        // string directoryPath1 = @"/path/to/your/directory";
+        Assert.Equals(["as"], Recursion.Task8.GetAllFiles(directoryPathTest));
+    }
 }

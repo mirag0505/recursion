@@ -19,11 +19,14 @@ namespace Recursion
         private static int recursionIterator(List<int> array, int index, int max, int secondMax)
         {
             if (index >= array.Count()) return secondMax;
+
             if (array[index] >= max)
             {
                 secondMax = max;
                 max = array[index];
             }
+            else if (array[index] >= secondMax) secondMax = array[index];
+
             return recursionIterator(array, index + 1, max, secondMax);
         }
         public static int getSecondMaxValue(List<int> array)

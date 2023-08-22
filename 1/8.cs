@@ -37,7 +37,7 @@ namespace Recursion
             foreach (string filePath in files)
             {
                 string fileName = Path.GetFileName(filePath);
-                list.Add("Файл: " + fileName);
+                list.Add(fileName);
             }
 
             return list;

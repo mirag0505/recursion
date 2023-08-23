@@ -16,22 +16,42 @@ namespace Recursion
 {
     public class Task7
     {
-        private static int recursionIterator(List<int> array, int index, int max, int secondMax)
+        static public int Compare<T>(T v1, T v2)
+        {
+            if (typeof(T) == typeof(String) || typeof(T) == typeof(Char))
+            {
+                return string.Compare(v1.ToString().Trim(), v2.ToString().Trim());
+            }
+            else
+            {
+                int newV1 = Convert.ToInt32(v1);
+                int newV2 = Convert.ToInt32(v2);
+
+                if (newV1 > newV2) return 1;
+                if (newV1 < newV2) return -1;
+                return 0;
+            }
+        }
+
+        private static T recursionIterator<T>(List<T> array, int index, T max, T secondMax)
         {
             if (index >= array.Count()) return secondMax;
 
-            if (array[index] >= max)
+            var isMaxBigger = Compare(array[index], max) >= 0;
+            var isSecondMaxBigger = Compare(array[index], secondMax) >= 0;
+
+            if (isMaxBigger)
             {
                 secondMax = max;
                 max = array[index];
             }
-            else if (array[index] >= secondMax) secondMax = array[index];
+            else if (isSecondMaxBigger) secondMax = array[index];
 
             return recursionIterator(array, index + 1, max, secondMax);
         }
-        public static int getSecondMaxValue(List<int> array)
+        public static T getSecondMaxValue<T>(List<T> array)
         {
-            return recursionIterator(array, 0, 0, 0);
+            return recursionIterator(array, 0, array[0], array[0]);
         }
     }
 }

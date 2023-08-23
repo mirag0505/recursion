@@ -106,6 +106,10 @@ public class UnitTest1
     [Fact]
     public void Task7()
     {
+        Assert.Equal(-1, Recursion.Task7.getSecondMaxValue(new List<int> { -1, -3, -5, -4 }));
+
+        Assert.Equal('c', Recursion.Task7.getSecondMaxValue(new List<char> { 'a', 'b', 'c', 'd' }));
+
         Assert.Equal(4, Recursion.Task7.getSecondMaxValue(new List<int> { 1, 3, 3, 5, 4 }));
         Assert.Equal(4, Recursion.Task7.getSecondMaxValue(new List<int> { 1, 2, 3, 4, 5 }));
         Assert.Equal(2, Recursion.Task7.getSecondMaxValue(new List<int> { 2, 2, 2, 2, 2 }));

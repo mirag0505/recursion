@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "1.sln"
+    "dotnet.defaultSolution": "1.sln",
+    "cmake.configureOnOpen": false
 }

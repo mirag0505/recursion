@@ -37,21 +37,34 @@ namespace Recursion
         {
             if (index >= array.Count()) return secondMax;
 
-            var isMaxBigger = Compare(array[index], max) >= 0;
-            var isSecondMaxBigger = Compare(array[index], secondMax) >= 0;
-
-            if (isMaxBigger)
+            if (Compare(array[index], max) >= 0)
             {
                 secondMax = max;
                 max = array[index];
             }
-            else if (isSecondMaxBigger) secondMax = array[index];
+            else if (Compare(array[index], secondMax) >= 0) secondMax = array[index];
 
             return recursionIterator(array, index + 1, max, secondMax);
         }
+
         public static T getSecondMaxValue<T>(List<T> array)
         {
-            return recursionIterator(array, 0, array[0], array[0]);
+            T max = default;
+            T min = default;
+
+            if (Compare(array[0], array[1]) >= 0)
+            {
+                max = array[0];
+                min = array[1];
+            }
+            else
+            {
+                min = array[0];
+                max = array[1];
+            }
+
+            int index = 2;
+            return recursionIterator(array, index, max, min);
         }
     }
 }

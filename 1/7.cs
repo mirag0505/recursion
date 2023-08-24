@@ -16,24 +16,12 @@ namespace Recursion
 {
     public class Task7
     {
-        static public int Compare<T>(T v1, T v2)
+        static public int Compare<T>(T a, T b) where T : IComparable<T>
         {
-            if (typeof(T) == typeof(String) || typeof(T) == typeof(Char))
-            {
-                return string.Compare(v1.ToString().Trim(), v2.ToString().Trim());
-            }
-            else
-            {
-                int newV1 = Convert.ToInt32(v1);
-                int newV2 = Convert.ToInt32(v2);
-
-                if (newV1 > newV2) return 1;
-                if (newV1 < newV2) return -1;
-                return 0;
-            }
+            return a.CompareTo(b);
         }
 
-        private static T recursionIterator<T>(List<T> array, int index, T max, T secondMax)
+        private static T findSecondMaxRecursively<T>(List<T> array, int index, T max, T secondMax) where T : IComparable<T>
         {
             if (index >= array.Count()) return secondMax;
 
@@ -44,10 +32,10 @@ namespace Recursion
             }
             else if (Compare(array[index], secondMax) >= 0) secondMax = array[index];
 
-            return recursionIterator(array, index + 1, max, secondMax);
+            return findSecondMaxRecursively(array, index + 1, max, secondMax);
         }
 
-        public static T getSecondMaxValue<T>(List<T> array)
+        public static T getSecondMaxValue<T>(List<T> array) where T : IComparable<T>
         {
             T max = default;
             T min = default;
@@ -63,8 +51,8 @@ namespace Recursion
                 max = array[1];
             }
 
-            int index = 2;
-            return recursionIterator(array, index, max, min);
+            int indexForStart = 2;
+            return findSecondMaxRecursively(array, indexForStart, max, min);
         }
     }
 }
